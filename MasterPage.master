@@ -1,0 +1,363 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Generador de Residuos</title>
+    <meta name="description" content="Free Bootstrap 4 Admin Theme | Pike Admin" />
+    <meta name="author" content="Pike Web Development - https://www.pikephp.com" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Switchery css -->
+    <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome CSS -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+
+    <!-- BEGIN CSS for this page -->
+    <link href="assets/plugins/datetimepicker/css/daterangepicker.css" rel="stylesheet" />
+    <!-- END CSS for this page -->
+
+    <script>
+      
+        function valida(e) {
+            tecla = (document.all) ? e.keyCode : e.which;
+
+            //Tecla de retroceso para borrar, siempre la permite
+            if (tecla == 8) {
+                return true;
+            }
+
+            // Patron de entrada, en este caso solo acepta numeros
+            patron = /[0-9]/;
+            tecla_final = String.fromCharCode(tecla);
+            return patron.test(tecla_final);
+        }
+        function soloLetras(e) {
+            key = e.keyCode || e.which;
+            tecla = String.fromCharCode(key).toLowerCase();
+            letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+            especiales = "8-37-39-46";
+
+            tecla_especial = false
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    tecla_especial = true;
+                    break;
+                }
+            }
+
+            if (letras.indexOf(tecla) == -1 && !tecla_especial) {
+                return false;
+            }
+        }
+
+    </script>
+
+
+
+    <%--   ENCABEZADOD E LA MAESTRA SIEMPRE VA EN EL HEAD--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body class="adminbody">
+
+
+
+
+
+
+
+    <%--CONTENIDO--%>
+    <form id="form1" runat="server">
+        <div id="main">
+
+            <!-- top bar navigation -->
+            <div class="headerbar">
+
+                <!-- LOGO -->
+                <div class="headerbar-left">
+                    <a href="RegistroEntregaResiduos.aspx" class="logo">
+                        <%-- <img  src="assets/images/logo.png" />--%>
+                        <span>G.P.R</span></a>
+                </div>
+
+                <nav class="navbar-custom">
+
+                    <ul class="list-inline float-right mb-0">
+                        <li class="list-inline-item dropdown notif show">
+                            <a id="Login" runat="server" class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="assets/images/avatars/admin.png" alt="Profile image" class="avatar-rounded" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+
+                                    <h5 class="text-overflow"><small></small></h5>
+                                </div>
+
+
+                                <!-- item-->
+                                <a runat="server" class="dropdown-item notify-item">
+                                    <asp:Button Class="btn btn-outline-primary" ID="CerrarSesion" runat="server" Text="Cerrar Sesion" OnClientClick="CerrarSesion" OnClick="CesarrSesion" />
+                                    <asp:Button Class="btn btn-outline-primary" ID="IniciarSesion" runat="server" Text="Iniciar Sesion" OnClientClick="IniciarSesioon" OnClick="IniciarSesioon" />
+                                </a>
+
+                                <!-- item-->
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+                                <i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+            <!-- End Navigation -->
+
+
+            <!-- Left Sidebar -->
+            <div class="left main-sidebar">
+
+                <div class="sidebar-inner leftscroll">
+
+                    <div id="sidebar-menu">
+
+                        <ul>
+
+
+
+                            <li id="Procesos" runat="server" class="submenu">
+                                <a><i class="fa fa-fw fa-table"></i><span>Procesos P.R </span><span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a href="RegistroEntregaResiduos.aspx">Registro Entrega Residuos</a></li>
+                                    <li><a href="RegistroAmbientePrograma.aspx">Registro Ambiente/Programa</a></li>
+                                    <li><a href="RegistroInstructorAprendiz.aspx">Registro Instructor/Aprendiz</a></li>
+                                    <li><a href="RegistroDependenciaFuncionario.aspx">Registro Dependencia/Funcionario</a></li>
+                                    <li><a href="ActualizarTipoResiduoResiduo.aspx">Anctualizar TipoResiduo/Residuo</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li id="Reportes" runat="server" class="submenu">
+                                <a href="ReporteMensual.aspx"><i class="fa fa-fw fa-file-text-o"></i><span>Reportes Mensuales </span><span class="menu-arrow"></span></a>
+                               
+                            </li>
+                            <li id="Li1" runat="server" class="submenu">
+                                <a href="ReporteTrimestral.aspx"><i class="fa fa-fw fa-file-text-o"></i><span>Reportes Trimestral </span><span class="menu-arrow"></span></a>
+                               
+                            </li>
+
+
+
+
+
+                            <%-- <li class="submenu">
+                                <a class="pro" href="#"><i class="fa fa-fw fa-star"></i><span>Pike Admin PRO </span><span class="menu-arrow"></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a target="_blank" href="https://www.pikeadmin.com/pike-admin-pro">Admin PRO features</a></li>
+                                    <li><a href="pro-settings.html">Settings</a></li>
+                                    <li><a href="pro-profile.html">My Profile</a></li>
+                                    <li><a href="pro-users.html">Users</a></li>
+                                    <li><a href="pro-articles.html">Articles</a></li>
+                                    <li><a href="pro-categories.html">Categories</a></li>
+                                    <li><a href="pro-pages.html">Pages</a></li>
+                                    <li><a href="pro-contact-messages.html">Contact Messages</a></li>
+                                    <li><a href="pro-slider.html">Slider</a></li>
+                                </ul>
+                            </li>--%>
+                        </ul>
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+            <!-- End Sidebar -->
+
+
+            <div class="content-page">
+
+                <!-- Start content -->
+                <div class="content">
+
+                    <div class="container-fluid">
+
+
+                        <!-- end row -->
+
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <!-- END container-fluid -->
+
+                </div>
+                <!-- END content -->
+
+            </div>
+            <!-- END content-page -->
+
+            <footer class="footer">
+                <span class="text-right">Derechos de autor <a target="_blank" href="https://www.facebook.com/">Camilo Torres</a>
+                </span>
+
+            </footer>
+
+        </div>
+        <!-- END main -->
+
+        <script src="assets/js/modernizr.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/moment.min.js"></script>
+
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+        <script src="assets/plugins/switchery/switchery.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/pikeadmin.js"></script>
+
+        <!-- BEGIN Java Script for this page -->
+
+        <!-- END Java Script for this page -->
+    </form>
+    <script>
+        $(document).ready(function () {
+
+            $('#example1').click(function () {
+                swal("Hello world!");
+            });
+
+            $('#example2').click(function () {
+                swal("Here's the title!", "...and here's the text!");
+            });
+
+            $('#bien').click(function () {
+                swal("Good job!", "You clicked the button!", "success");
+            });
+
+            $('#example4').click(function () {
+                swal({
+                    title: "Are you sure?",
+                    text: "Once deleted, you will not be able to recover this imaginary file!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                     .then((willDelete) => {
+                         if (willDelete) {
+                             swal("Poof! Your imaginary file has been deleted!", {
+                                 icon: "success",
+                             });
+                         } else {
+                             swal("Your imaginary file is safe!");
+                         }
+                     });
+            });
+
+            $('#example5').click(function () {
+                swal("Write something here:", {
+                    content: "input",
+                })
+                     .then((value) => {
+                         swal(`You typed: ${value}`);
+                     });
+            });
+
+            $('#example6').click(function () {
+                swal({
+                    text: 'Search for a movie. e.g. "Titanic".',
+                    content: "input",
+                    button: {
+                        text: "Search!",
+                        closeModal: false,
+                    },
+                })
+                         .then(name => {
+                             if (!name) throw null;
+
+                             return fetch(`https://itunes.apple.com/search?term=${name}&entity=movie`);
+                         })
+                         .then(results => {
+                             return results.json();
+                         })
+                         .then(json => {
+                             const movie = json.results[0];
+
+                             if (!movie) {
+                                 return swal("No movie was found!");
+                             }
+
+                             const name = movie.trackName;
+                             const imageURL = movie.artworkUrl100;
+
+                             swal({
+                                 title: "Top result:",
+                                 text: name,
+                                 icon: imageURL,
+                             });
+                         })
+                         .catch(err => {
+                             if (err) {
+                                 swal("Oh noes!", "The AJAX request failed!", "error");
+                             } else {
+                                 swal.stopLoading();
+                                 swal.close();
+                             }
+                         });
+            });
+
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,432 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Iniciomaster.master.cs" Inherits="Iniciomaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Success path An Education Category Flat Bootstrap Responsive Website Template | About :: W3layouts</title>
+
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Success path Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+    </script>
+    <!--// Meta tag Keywords -->
+
+    <!-- css files -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <!-- Style-CSS -->
+    <link rel="stylesheet" href="css/fontawesome-all.css" />
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //css files -->
+
+    <!-- web-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet" />
+    <!-- //web-fonts -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <%--  <a class="navbar-brand text-uppercase" href="index.html">Generador Residuos Solidos</a>--%>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center pr-md-4" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Inicio.aspx">Inicio</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Login.aspx">Iniciar Sesion</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- //Navigation -->
+
+    <!-- inner page banner -->
+
+    <!-- //inner page banner -->
+    <!-- about -->
+
+    <br />
+    <br />
+    <br />
+    <div class="about py-5">
+        <div class="container  py-md">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/sena1(1).png" alt="First slide" />
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/sena2.jpg" alt="Second slide" />
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div class="about py-5">
+            <div class="container  py-md-3">
+                <div class="w3-head-all mb-3">
+                    <h3>Patio De Residuos</h3>
+                </div>
+                <div class="agile_about_grids row">
+                    <div class="col-md-6 agile_about_grid_left">
+                        <div class="row">
+                            <div class="col-md-6 agile_about_grid_left1">
+                                <img src="images/ab1.jpg" alt=" " class="img-responsive img-fluid" />
+                            </div>
+                            <div class="col-md-6 agile_about_grid_left1">
+                                <img src="images/ab2.jpg" alt=" " class="img-responsive img-fluid" />
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <img class="agile_about_grid_left_img img-responsive img-fluid" src="images/ab3.jpg" alt=" " />
+                    </div>
+                    <form id="form1" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                    <div class="col-md-6 agile_about_grid_right">
+                        <h4>Funcion</h4>
+                        <p>
+                            Este lugar fue creado con el fin de dar buena disposicion de los residuos 
+                        generados dentro de los ambientes de formacion , oficinas y espacios de recreacion
+                        del centro Industrial de Mantenimiento y Manufactura.
+                        </p>
+                        <p>
+                            Con este fin se realizan charlas de sencibilizacion mensuales a la comunidad CIMM
+                        en las cuales se refuerza sobre disposicion adecuada de residuos en cada uno de los puntos
+                        ecologicos ubicados en la entidad y al finalizar la joranada academica los aprendices 
+                        deben realizar el aseo de cada ambiente y dirigirse al patio de residuos 
+                        a disponer el barrido generado, en el transcurso de la jornada estos son pesados
+                        y registrados diariamente.
+                        </p>
+                        <p>
+                            Se verifica mensualmente por medio de una base de datos ,por este medio 
+                        realizamos el raking trimestral de cada ambiente de formacion.
+                        
+                        En este lugar se reciben residuos tales como peligrosos,aprovechables,ordinarios. 
+                        </p>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <%--<div class="latest py-5">
+            <div class="container  py-md-3">
+                <div class="w3-head-all mb-3">
+                    <h3>PUNTOS ECOLOGICOS</h3>
+                </div>
+                <div class="news_grids row">
+                    <div class="col-lg-4">
+                        <div class="news_grid1">
+                            <div class="news_grid_info">
+                                <h3>Ordinarios</h3>
+                                <p>en esta caneca se colocan los residuos ordinarios que son aquellos que no se pueden reciclar estos son: el papel carbón, papel mantequilla, pañuelos, papel higiénico, servilletas utilizadas , plastificados, chicles, residuos de barridos y empaques tetrapak.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="news_grid2">
+                            <div class="news_grid_info">
+
+                                <h3>Plastico</h3>
+                                <p>En este contenedor solo puedes depositar envases de bebidas no retornables, vasos desechables, bolsas plásticas, demás recipientes plásticos limpios y que estén vacíos.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="news_grid3">
+                            <div class="news_grid_info">
+
+                                <h3>Papel y Carton</h3>
+                                <p>En esta caneca se deben depositar residuos no peligrosos, reciclables. como: envases de bebidas no retornables,bolsas plásticas, demás recipientes plásticos limpios y que estén vacíos, residuos metálicos como latas de aluminio y cartón.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>--%>
+
+
+
+      
+            <div class="container  py-md-3">
+                <div class="w3-head-all mb-3">
+                    <div class="news_grids row">
+                    <div class="card border-primary mb-3" style="max-width: 18rem; left: 0px; top: 3px;">
+                        <div class="card-header">Residuos </div>
+                        <div class="card-body text-primary">
+                            <h5 class="card-title"> Plasticos</h5>
+                            <p class="card-text">En esta caneca se colocan los residuos ordinarios que son aquellos que no se pueden reciclar estos son: el papel carbón, papel mantequilla, pañuelos, papel higiénico, servilletas utilizadas , plastificados, chicles, residuos de barridos y empaques tetrapak.</p>
+                        </div>
+                    </div>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                    <div  class="card border-success mb-3"  style="max-width: 18rem;">
+                        <div class="card-header">Residuos</div>
+                        <div class="card-body text-secondary">
+                            <h5 class="card-title">Carton/Papel  </h5>
+                            <p class="card-text">En este contenedor solo puedes depositar envases de bebidas no retornables, vasos desechables, bolsas plásticas, demás recipientes plásticos limpios y que estén vacíos.</p>
+                        </div>
+                    </div>&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   &nbsp;   &nbsp; 
+                    <div class="card border-secondary mb-3"  style="max-width: 18rem;">
+                        <div class="card-header">Residuos </div>
+                        <div class="card-body text-success">
+                            <h5 class="card-title">Ordinarios</h5>
+                            <p class="card-text">En esta caneca se deben depositar residuos no peligrosos, reciclables. como: envases de bebidas no retornables,bolsas plásticas, demás recipientes plásticos limpios y que estén vacíos, residuos metálicos como latas de aluminio y cartón.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- //about -->
+    <!-- Latest -->
+
+    <!-- //Latest -->
+    <!-- offers -->
+    <div class="offers py-5">
+        <div class="container  py-md-3">
+            <div class="w3-head-all mb-3 news_head">
+                <h3>Politica Ambiental
+                    <br />
+
+                </h3>
+
+            </div>
+            <div class="offers-grids row">
+                <div class="col-md-6 wthree-offers-left">
+                    <div class="offers-left-heading">
+                        <p>
+                            El SENA desde su subsistema de Gestion Ambiental meneja de manera sostenible sus aspectos e impactos significativos. En articulacion
+                        con la promesa de Valor del Sistema Integrado de Gestion y Autocontrol - SIGA, SE COMPROMETE A:
+                        </p>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="offers-left-grids">
+                        <div class="offers-number">
+                            <p>1</p>
+                        </div>
+                        <div class="offers-text">
+                            <p>La implemetacion de diferentes estrategias que contribuyan a la mitigacion y adaptacion al cambio climatico.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="offers-left-grids offers-left-middle">
+                        <div class="offers-number">
+                            <p>2</p>
+                        </div>
+                        <div class="offers-text">
+                            <p>El uso racional y eficiente de los recursos naturales, primando el agua y la energia.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="offers-left-grids">
+                        <div class="offers-number">
+                            <p>3</p>
+                        </div>
+                        <div class="offers-text">
+                            <p>La optimizacion del uso de los materiales de formacion, empleando en lo posible bienes y servicios amigables con el medio hambiente.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="offers-left-grids">
+                        <div class="offers-number">
+                            <p>4</p>
+                        </div>
+                        <div class="offers-text">
+                            <p>El control de las emisiones, los vertimientos y residuos generados al interior de la Entidad.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="offers-left-grids">
+                        <div class="offers-number">
+                            <p>5</p>
+                        </div>
+                        <div class="offers-text">
+                            <p>El fomento de la toma de conciencia por el respeto y proteccion del medio ambiente entre los aprendices , servidores pubicos y contratistas que presten servicion a nombre de la entidad.</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- offers -->
+    <!-- team -->
+    <%--    <div class="team py-">
+        <div class="container  py-md-3">
+            <div class="w3-head-all mb-3">
+                <h3>Programador</h3>
+            </div>
+            <div class="teamgrids row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 teamgrid1">
+                    <img src="images/t1.jpg" class="img-responsive img-fluid" alt="" />
+                    <div class="teaminfo">
+                        <h3>Sebastian Torres</h3>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                        <p><i class="fas fa-dot-circle" aria-hidden="true"></i>Programador</p>
+                        <p><i class="fas fa-phone" aria-hidden="true"></i>3138234398</p>
+
+                    </div>
+                </div>
+                
+               
+             
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>--%>
+    <!-- //team -->
+
+
+    <!-- footer -->
+    <section class="agile-footer w3ls-section py-5">
+        <div class="container">
+            <div class="list-footer">
+                <ul class="footer-nav text-center">
+                    <li>
+                        <a href="Iniico.aspx">Inicio</a>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li>
+                        <a href="Login.aspx">Iniciar Sesion</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="agileits_w3layouts-copyright text-center">
+                <p>
+                    © 2018. Patio Residuos| Diseñado por
+				<a href="https://www.facebook.com/profile.php?id=100012665321470" target="=_blank">Sebastian Torres </a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- //footer -->
+
+
+
+    <!-- //Vertically centered Modal -->
+
+    <!-- js-scripts -->
+
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- //js -->
+    <!-- start-smoth-scrolling -->
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!-- start-smoth-scrolling -->
+
+    <!-- //js-scripts -->
+
+</body>
+
+
+</html>
